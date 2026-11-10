@@ -1,0 +1,56 @@
+import {
+  Layers,
+  Code2,
+  Globe,
+  Workflow,
+  Sliders,
+  Briefcase,
+  Maximize2,
+  Cpu,
+  LifeBuoy,
+  LayoutDashboard,
+  Factory,
+  Store,
+  HeartPulse,
+  Truck,
+  Boxes,
+  Building2,
+  Compass,
+  Target,
+  CheckCircle2,
+  Wrench,
+  ShieldCheck,
+  Users,
+  Handshake,
+} from 'lucide-react';
+
+const iconMap = {
+  Layers,
+  Code2,
+  Globe,
+  Workflow,
+  Sliders,
+  Briefcase,
+  Maximize2,
+  Cpu,
+  LifeBuoy,
+  LayoutDashboard,
+  Factory,
+  Store,
+  HeartPulse,
+  Truck,
+  Boxes,
+  Building2,
+  Compass,
+  Target,
+  CheckCircle2,
+  Wrench,
+  ShieldCheck,
+  Users,
+  Handshake,
+};
+
+export function DynamicIcon({ name, className = 'h-5 w-5' }) {
+  const IconComponent = iconMap[name] || Layers;
+  return <IconComponent className={className} aria-hidden="true" />;
+}

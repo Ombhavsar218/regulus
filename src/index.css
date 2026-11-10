@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Default Light Theme — Official REGULUS Brand Palette (White Primary Experience) */
+  :root {
+    --bg-page: 254 254 254;         /* #FEFEFE Pure White — Primary background */
+    --bg-subtle: 231 233 240;       /* #E7E9F0 Light Grey — Secondary sections */
+    --bg-card: 231 233 240;         /* #E7E9F0 Light Grey — Cards & subtle containers */
+    --bg-elevated: 254 254 254;     /* #FEFEFE Pure White — Cards on Light Grey sections */
+
+    --border-subtle: 231 233 240;   /* #E7E9F0 Light Grey — Structural hairline borders */
+    --border-strong: 83 95 128;     /* #535F80 Slate Blue — Interactive & emphasis borders */
+
+    --text-primary: 5 23 71;        /* #051747 Deep Navy — Headings & primary text */
+    --text-secondary: 83 95 128;    /* #535F80 Slate Blue — Secondary text & icons */
+    --text-faint: 83 95 128;        /* #535F80 Slate Blue — Supporting labels */
+
+    --accent-primary: 8 31 98;      /* #081F62 Royal Navy — Primary buttons & highlights */
+    --accent-hover: 5 23 71;        /* #051747 Deep Navy — Interactive hover */
+    --accent-btn-text: 254 254 254; /* #FEFEFE Pure White — Button text */
+    --accent-text: 8 31 98;         /* #081F62 Royal Navy — Interactive text links */
+    --accent-soft: rgb(8 31 98 / 0.08);
+
+    --shadow-card: 0 1px 2px rgb(5 23 71 / 0.04), 0 4px 12px rgb(5 23 71 / 0.03);
+    --shadow-elevated: 0 12px 32px -8px rgb(5 23 71 / 0.1), 0 2px 6px rgb(5 23 71 / 0.04);
+    --grid-line: rgb(83 95 128 / 0.08);
+  }
+
+  /* Dark Mode — User-Controlled (Official REGULUS Brand Palette) */
+  .dark {
+    --bg-page: 5 23 71;             /* #051747 Deep Navy — Primary background */
+    --bg-subtle: 8 31 98;           /* #081F62 Royal Navy — Secondary sections */
+    --bg-card: 8 31 98;             /* #081F62 Royal Navy — Cards & highlighted sections */
+    --bg-elevated: 5 23 71;         /* #051747 Deep Navy — Cards on Royal Navy sections */
+
+    --border-subtle: 83 95 128;     /* #535F80 Slate Blue — Supporting structural borders */
+    --border-strong: 231 233 240;   /* #E7E9F0 Light Grey — Subtle bright borders */
+
+    --text-primary: 254 254 254;    /* #FEFEFE Pure White — Primary text & headings */
+    --text-secondary: 231 233 240;  /* #E7E9F0 Light Grey — Secondary text */
+    --text-faint: 231 233 240;      /* #E7E9F0 Light Grey — Readable captions on navy */
+
+    --accent-primary: 254 254 254;  /* #FEFEFE Pure White — High-contrast Dark Mode CTA */
+    --accent-hover: 231 233 240;    /* #E7E9F0 Light Grey — Button hover */
+    --accent-btn-text: 5 23 71;     /* #051747 Deep Navy — CTA text */
+    --accent-text: 231 233 240;     /* #E7E9F0 Light Grey — Interactive highlights */
+    --accent-soft: rgb(83 95 128 / 0.35);
+
+    --shadow-card: 0 1px 2px rgb(5 23 71 / 0.45), 0 4px 16px rgb(5 23 71 / 0.3);
+    --shadow-elevated: 0 18px 40px -12px rgb(5 23 71 / 0.65), 0 2px 8px rgb(5 23 71 / 0.4);
+    --grid-line: rgb(231 233 240 / 0.06);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    background-color: rgb(var(--bg-page));
+    color: rgb(var(--text-primary));
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: background-color 220ms ease, color 220ms ease;
+    overflow-x: clip;
+  }
+
+  *:focus-visible {
+    outline: 2px solid rgb(var(--border-strong));
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .theme-transition {
+    transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+    transition-duration: 220ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .architectural-grid {
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}

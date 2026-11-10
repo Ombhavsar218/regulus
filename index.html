@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REGULUS | Customized ERP Software &amp; Business Technology Solutions</title>
+    <meta
+      name="description"
+      content="REGULUS is a software development and business technology solutions company building customized ERP software, custom applications, business process automation, and corporate websites."
+    />
+    <meta
+      name="keywords"
+      content="Customized ERP Software Development, Manufacturing ERP Solutions, Custom Software Development Company, Website Development Company, Business Automation Solutions"
+    />
+    <meta name="author" content="REGULUS" />
+    <meta name="theme-color" content="#FEFEFE" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="REGULUS | Technology That Moves Business Forward"
+    />
+    <meta
+      property="og:description"
+      content="We build customized ERP systems, intelligent business software, and professional websites tailored to individual business operations."
+    />
+    <meta property="og:site_name" content="REGULUS" />
+
+    <!-- Twitter / Social Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="REGULUS | Technology That Moves Business Forward"
+    />
+    <meta
+      name="twitter:description"
+      content="Customized ERP software development, custom applications, business automation, and corporate web engineering."
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('regulus-theme');
+          var theme = saved === 'dark' ? 'dark' : 'light';
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+          document.documentElement.style.colorScheme = theme;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-regulus-bg text-regulus-text antialiased selection:bg-regulus-accent selection:text-regulus-accent-btn-text">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

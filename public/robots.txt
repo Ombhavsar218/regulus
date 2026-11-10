@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Update Sitemap URL to your production domain before deployment
+Sitemap: https://example.com/sitemap.xml
